@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AST Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel input-panel">
+        <div class="panel-header">
+          <h2>Input (C)</h2>
+          <button id="run-btn" class="btn primary">
+            Parse &amp; Visualize
+          </button>
+        </div>
+        <textarea id="code-input" spellcheck="false"></textarea>
+        <div id="error-box" class="error-box hidden"></div>
+
+        <h2>Evaluation</h2>
+        <pre id="eval-output" class="output-box vars-box"></pre>
+
+        <h2>Generated Code (Python)</h2>
+        <pre id="codegen-output" class="output-box"></pre>
+      </section>
+
+      <section class="panel ast-panel">
+        <h2>AST</h2>
+        <div id="ast-container" class="ast-container">
+          <svg id="ast-svg"></svg>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
